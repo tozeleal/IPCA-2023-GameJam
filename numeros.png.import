@@ -2,24 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://dhy5pmg6ifbs2"
-=======
-<<<<<<< HEAD
-uid="uid://dhckneltac7wm"
-=======
-uid="uid://pvwpowp8qs22"
->>>>>>> main
->>>>>>> main
-path="res://.godot/imported/armor2.png-74af5ebb534c8bb8c92ac8fcbe089d89.ctex"
+uid="uid://dbwkeomosu0c6"
+path="res://.godot/imported/numeros.png-1042cf50d54246c8161372a62407e5ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Strawberry/walk/armor2.png"
-dest_files=["res://.godot/imported/armor2.png-74af5ebb534c8bb8c92ac8fcbe089d89.ctex"]
+source_file="res://numeros.png"
+dest_files=["res://.godot/imported/numeros.png-1042cf50d54246c8161372a62407e5ee.ctex"]
 
 [params]
 
