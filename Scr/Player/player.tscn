@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmet3drtv2bau"]
+
+[ext_resource type="Script" path="res://Scr/Player/Player.gd" id="1_goi3h"]
+[ext_resource type="Texture2D" uid="uid://dairg6sv3t38t" path="res://assets/sprites/player/walk/happy1.png" id="2_72qfn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m2hn"]
+size = Vector2(30, 77.5)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_goi3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.105, 0.105)
+texture = ExtResource("2_72qfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 53.75)
+shape = SubResource("RectangleShape2D_0m2hn")

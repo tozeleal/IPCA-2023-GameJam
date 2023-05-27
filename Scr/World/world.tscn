@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj0ysm7pu5pip"]
+
+[ext_resource type="PackedScene" uid="uid://bmet3drtv2bau" path="res://Scr/Player/player.tscn" id="1_b1f2r"]
+[ext_resource type="Script" path="res://Scr/World/world.gd" id="1_sy1m7"]
+[ext_resource type="PackedScene" uid="uid://c6v23l0sv7agl" path="res://Scr/World/Buttons/ButtonPlataform.tscn" id="3_plnwp"]
+[ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="5_1q11h"]
+[ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="5_l8ted"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpsw5"]
+size = Vector2(72, 301)
+
+[node name="World" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_sy1m7")
+
+[node name="Player" parent="." instance=ExtResource("1_b1f2r")]
+position = Vector2(270, 554)
+
+[node name="Plataforms" type="Node2D" parent="."]
+position = Vector2(176, 394)
+
+[node name="ButtonPlataform" parent="." instance=ExtResource("3_plnwp")]
+offset_left = 884.0
+offset_top = 458.0
+offset_right = 1020.0
+offset_bottom = 594.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Final" type="Area2D" parent="."]
+position = Vector2(78, 166)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final"]
+shape = SubResource("RectangleShape2D_qpsw5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Final"]
+position = Vector2(-1.5, -2.50002)
+scale = Vector2(0.554688, 2.35156)
+texture = ExtResource("5_l8ted")
+
+[node name="place_holder_plataform" parent="." instance=ExtResource("5_1q11h")]
+position = Vector2(337, 720)
+
+[node name="place_holder_plataform2" parent="." instance=ExtResource("5_1q11h")]
+position = Vector2(370, 384)
+
+[connection signal="body_entered" from="Final" to="." method="_on_final_body_entered"]
