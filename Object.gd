@@ -25,4 +25,6 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			#mouse released
 			selected = false
 			
-	
+
+func _on_area_2d_area_entered(area):
+	area.visible=true
