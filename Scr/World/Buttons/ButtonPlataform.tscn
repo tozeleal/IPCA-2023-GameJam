@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6v23l0sv7agl"]
+
+[ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="1_pvaeg"]
+[ext_resource type="Script" path="res://Scr/World/Buttons/buttonPlataform.gd" id="2_bkvdi"]
+
+[node name="ButtonPlaform" type="Button"]
+anchors_preset = -1
+anchor_right = 0.106
+anchor_bottom = 0.189
+offset_right = 0.319992
+offset_bottom = -0.0800018
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+icon = ExtResource("1_pvaeg")
+script = ExtResource("2_bkvdi")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
