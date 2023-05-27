@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://cglc0e5hyh8vx"
-=======
-uid="uid://5gyvk1j1n6dp"
->>>>>>> main
-path="res://.godot/imported/stressed1.png-77980e267ba0141f1171b5b85c48d46a.ctex"
+uid="uid://deitjk6kr678b"
+path="res://.godot/imported/PizzaSlice.png-4cfcfc41359259dc6247daacb0bb451a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/jump/stressed1.png"
-dest_files=["res://.godot/imported/stressed1.png-77980e267ba0141f1171b5b85c48d46a.ctex"]
+source_file="res://assets/sprites/Dragables/PizzaSlice.png"
+dest_files=["res://.godot/imported/PizzaSlice.png-4cfcfc41359259dc6247daacb0bb451a.ctex"]
 
 [params]
 

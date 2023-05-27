@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://tpelevgjifp6"
+=======
+uid="uid://c2c00l0togrpg"
+>>>>>>> main
 path="res://.godot/imported/happy2.png-bc9933ec89e18676fa943a7942dc36f9.ctex"
 metadata={
 "vram_texture": false
