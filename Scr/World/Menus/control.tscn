@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkcupnjh8nwjj"]
+
+[ext_resource type="Script" path="res://Scr/World/Menus/control.gd" id="1_q2g0r"]
+[ext_resource type="Texture2D" uid="uid://ygwsluq4l8c5" path="res://assets/sprites/keyboard/arrows.png" id="1_w2b2d"]
+[ext_resource type="Texture2D" uid="uid://c4ur5p0hpy7sl" path="res://assets/sprites/ground/TittleBlur.jpg" id="2_g0j17"]
+[ext_resource type="Texture2D" uid="uid://bo3tchrq5s0dq" path="res://assets/sprites/keyboard/awsd.png" id="4_2ssn6"]
+[ext_resource type="Texture2D" uid="uid://bkdrwjm28y4ir" path="res://assets/sprites/keyboard/instrutions.png" id="5_vvjtq"]
+[ext_resource type="Texture2D" uid="uid://dwaq6ygc2kjt8" path="res://assets/sprites/keyboard/space.png" id="6_0lymx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q2g0r")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(643.778, 361.5)
+scale = Vector2(0.668, 0.668)
+texture = ExtResource("2_g0j17")
+
+[node name="SetasSprite" type="Sprite2D" parent="."]
+position = Vector2(917, 112)
+scale = Vector2(0.0901387, 0.0901387)
+texture = ExtResource("1_w2b2d")
+
+[node name="AWSDSprite" type="Sprite2D" parent="."]
+position = Vector2(378, 112)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("4_2ssn6")
+
+[node name="billboard" type="Sprite2D" parent="."]
+position = Vector2(649, 337)
+scale = Vector2(0.272036, 0.272036)
+texture = ExtResource("5_vvjtq")
+
+[node name="SpaceSprite" type="Sprite2D" parent="."]
+position = Vector2(373, 323)
+scale = Vector2(0.105826, 0.105826)
+texture = ExtResource("6_0lymx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 423.0
+offset_right = 743.0
+offset_bottom = 534.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Go back"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

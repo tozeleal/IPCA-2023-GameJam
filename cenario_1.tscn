@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://chh56icpjw8gm"]
 
-[ext_resource type="Texture2D" uid="uid://ddfqjaykquxwi" path="res://cenarios/cenario1.jpg" id="1_lw8ga"]
+[ext_resource type="Texture2D" uid="uid://boxonf2byau7x" path="res://cenarios/cenario1.jpg" id="1_lw8ga"]
 [ext_resource type="Script" path="res://cenario_1.gd" id="1_ppgv5"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_gagys"]
 [ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="3_n3t5x"]
 [ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="4_kldt8"]
 [ext_resource type="Script" path="res://Button.gd" id="5_mtfcs"]
-[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="6_mq6qd"]
+[ext_resource type="AudioStream" uid="uid://dmas4linpymn1" path="res://assets/Music/calma.mp3" id="6_mq6qd"]
 [ext_resource type="PackedScene" uid="uid://d3dgper503ftt" path="res://enemy.tscn" id="7_lt00y"]
 
 [node name="Cenario_1" type="Node2D"]

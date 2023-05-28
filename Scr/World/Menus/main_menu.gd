@@ -17,12 +17,11 @@ func _on_start_game_button_pressed():
 
 
 func _on_controls_button_pressed():
-	get_tree().change_scene_to_file("res://Src/control.tscn")
+	get_tree().change_scene_to_file("res://Scr/World/Menus/control.tscn")
 
 
 func _on_credits_button_pressed():
-	var credits = load("res://Src/credits.tscn")
-	get_tree().current_scene.add_child(credits)
+	get_tree().change_scene_to_file("res://Scr/World/Menus/credits.tscn")
 
 
 func _on_exit_button_pressed():
