@@ -1,9 +1,165 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7dpneqxbatu7"]
+[gd_scene load_steps=21 format=3 uid="uid://b7dpneqxbatu7"]
 
-[ext_resource type="Texture2D" uid="uid://c378vo0tl85lr" path="res://cenarios/cenario8.jpg" id="1_737wl"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
-[ext_resource type="Texture2D" uid="uid://btkdev7q1c25c" path="res://Obstaculo.png" id="3_g4uh3"]
-[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
+[ext_resource type="Texture2D" uid="uid://6l3c7p0kss00" path="res://cenarios/cenario8.jpg" id="1_737wl"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
+[ext_resource type="Texture2D" uid="uid://bplgcugmvrww0" path="res://Obstaculo.png" id="3_g4uh3"]
+[ext_resource type="Script" path="res://Obstaculo1.gd" id="3_odkct"]
+[ext_resource type="AudioStream" uid="uid://jdmnxb5ebhlt" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
+[ext_resource type="Script" path="res://Obstaculo2.gd" id="5_1nvox"]
+[ext_resource type="Script" path="res://Obstaculo3.gd" id="6_34ipb"]
+[ext_resource type="Script" path="res://Obstaculo4.gd" id="7_s6ybs"]
+
+[sub_resource type="Animation" id="Animation_tku56"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -140), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j8lyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5xgvt"]
+_data = {
+"RESET": SubResource("Animation_j8lyd"),
+"new_animation": SubResource("Animation_tku56")
+}
+
+[sub_resource type="Animation" id="Animation_tal35"]
+resource_name = "new_animation"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -140)]
+}
+
+[sub_resource type="Animation" id="Animation_ffqr7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyrug"]
+_data = {
+"RESET": SubResource("Animation_ffqr7"),
+"new_animation": SubResource("Animation_tal35")
+}
+
+[sub_resource type="Animation" id="Animation_wa1ol"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -160)]
+}
+
+[sub_resource type="Animation" id="Animation_7vkyl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkf58"]
+_data = {
+"RESET": SubResource("Animation_7vkyl"),
+"new_animation": SubResource("Animation_wa1ol")
+}
+
+[sub_resource type="Animation" id="Animation_2x3pn"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -40), Vector2(0, 0), Vector2(0, -180)]
+}
+
+[sub_resource type="Animation" id="Animation_5xedk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_efl5y"]
+_data = {
+"RESET": SubResource("Animation_5xedk"),
+"new_animation": SubResource("Animation_2x3pn")
+}
 
 [node name="cenario_8" type="Node2D"]
 
@@ -20,49 +176,81 @@ polygon = PackedVector2Array(-967.521, 538.496, -963.008, -61.6713, -740.39, -58
 [node name="Player" parent="." instance=ExtResource("2_fqdxa")]
 position = Vector2(74, 225)
 
-[node name="Obstaculo" type="Sprite2D" parent="."]
+[node name="Obstaculo1" type="CharacterBody2D" parent="."]
+script = ExtResource("3_odkct")
+
+[node name="Sprite" type="Sprite2D" parent="Obstaculo1"]
 position = Vector2(222, 268)
 rotation = 1.5708
 texture = ExtResource("3_g4uh3")
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo1"]
+position = Vector2(222, 268)
+rotation = 1.5708
 polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
 
-[node name="Obstaculo2" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Obstaculo1"]
+libraries = {
+"": SubResource("AnimationLibrary_5xgvt")
+}
+
+[node name="Obstaculo2" type="CharacterBody2D" parent="."]
+script = ExtResource("5_1nvox")
+
+[node name="Obstaculo2" type="Sprite2D" parent="Obstaculo2"]
 position = Vector2(1126, 259)
 rotation = 1.5708
 texture = ExtResource("3_g4uh3")
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo2"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo2/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo2"]
+position = Vector2(1126, 259)
+rotation = 1.5708
 polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
 
-[node name="Obstaculo3" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Obstaculo2"]
+libraries = {
+"": SubResource("AnimationLibrary_qyrug")
+}
+
+[node name="Obstaculo3" type="CharacterBody2D" parent="."]
+script = ExtResource("6_34ipb")
+
+[node name="Obstaculo3" type="Sprite2D" parent="Obstaculo3"]
 position = Vector2(824, 266)
 rotation = 1.5708
 texture = ExtResource("3_g4uh3")
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo3"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo3/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo3"]
+position = Vector2(824, 266)
+rotation = 1.5708
 polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
 
-[node name="Obstaculo4" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Obstaculo3"]
+libraries = {
+"": SubResource("AnimationLibrary_mkf58")
+}
+
+[node name="Obstaculo4" type="CharacterBody2D" parent="."]
+script = ExtResource("7_s6ybs")
+
+[node name="Obstaculo4" type="Sprite2D" parent="Obstaculo4"]
 position = Vector2(535, 266)
 rotation = 1.5708
 texture = ExtResource("3_g4uh3")
 metadata/_edit_group_ = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo4"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo4/StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo4"]
+position = Vector2(535, 266)
+rotation = 1.5708
 polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Obstaculo4"]
+libraries = {
+"": SubResource("AnimationLibrary_efl5y")
+}
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_i0bye")

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://7n5v20qijbgf"]
 
-[ext_resource type="Texture2D" uid="uid://b72hxln7gk8s3" path="res://cenarios/cenario3.jpg" id="1_1bhsh"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_qt0ut"]
-[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="3_chneo"]
+[ext_resource type="Texture2D" uid="uid://cwowch5es0oa" path="res://cenarios/cenario3.jpg" id="1_1bhsh"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_qt0ut"]
+[ext_resource type="AudioStream" uid="uid://dmas4linpymn1" path="res://assets/Music/calma.mp3" id="3_chneo"]
 
 [node name="Cenario_3" type="Node2D"]
 

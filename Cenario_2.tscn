@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bcpvv7yi6kj76"]
 
-[ext_resource type="Texture2D" uid="uid://buw3x8lyl3xoo" path="res://cenarios/cenario2.jpg" id="1_2wr5o"]
+[ext_resource type="Texture2D" uid="uid://cot43xfa6uaqy" path="res://cenarios/cenario2.jpg" id="1_2wr5o"]
 [ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="2_eprv5"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="3_40aek"]
-[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="4_f0a88"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="3_40aek"]
+[ext_resource type="AudioStream" uid="uid://dmas4linpymn1" path="res://assets/Music/calma.mp3" id="4_f0a88"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2t40g"]
 
