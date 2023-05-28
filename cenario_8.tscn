@@ -1,13 +1,28 @@
 [gd_scene load_steps=21 format=3 uid="uid://b7dpneqxbatu7"]
 
-[ext_resource type="Texture2D" uid="uid://6l3c7p0kss00" path="res://cenarios/cenario8.jpg" id="1_737wl"]
+[ext_resource type="Texture2D" uid="uid://c378vo0tl85lr" path="res://cenarios/cenario8.jpg" id="1_737wl"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
-[ext_resource type="Texture2D" uid="uid://bplgcugmvrww0" path="res://Obstaculo.png" id="3_g4uh3"]
+[ext_resource type="Texture2D" uid="uid://btkdev7q1c25c" path="res://Obstaculo.png" id="3_g4uh3"]
 [ext_resource type="Script" path="res://Obstaculo1.gd" id="3_odkct"]
-[ext_resource type="AudioStream" uid="uid://jdmnxb5ebhlt" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
+[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
 [ext_resource type="Script" path="res://Obstaculo2.gd" id="5_1nvox"]
 [ext_resource type="Script" path="res://Obstaculo3.gd" id="6_34ipb"]
 [ext_resource type="Script" path="res://Obstaculo4.gd" id="7_s6ybs"]
+
+[sub_resource type="Animation" id="Animation_j8lyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_tku56"]
 resource_name = "new_animation"
@@ -26,7 +41,13 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -140), Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_j8lyd"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5xgvt"]
+_data = {
+"RESET": SubResource("Animation_j8lyd"),
+"new_animation": SubResource("Animation_tku56")
+}
+
+[sub_resource type="Animation" id="Animation_ffqr7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -39,12 +60,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5xgvt"]
-_data = {
-"RESET": SubResource("Animation_j8lyd"),
-"new_animation": SubResource("Animation_tku56")
 }
 
 [sub_resource type="Animation" id="Animation_tal35"]
@@ -64,7 +79,13 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -140)]
 }
 
-[sub_resource type="Animation" id="Animation_ffqr7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyrug"]
+_data = {
+"RESET": SubResource("Animation_ffqr7"),
+"new_animation": SubResource("Animation_tal35")
+}
+
+[sub_resource type="Animation" id="Animation_7vkyl"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -77,12 +98,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qyrug"]
-_data = {
-"RESET": SubResource("Animation_ffqr7"),
-"new_animation": SubResource("Animation_tal35")
 }
 
 [sub_resource type="Animation" id="Animation_wa1ol"]
@@ -102,7 +117,13 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -160)]
 }
 
-[sub_resource type="Animation" id="Animation_7vkyl"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkf58"]
+_data = {
+"RESET": SubResource("Animation_7vkyl"),
+"new_animation": SubResource("Animation_wa1ol")
+}
+
+[sub_resource type="Animation" id="Animation_5xedk"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -115,12 +136,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_mkf58"]
-_data = {
-"RESET": SubResource("Animation_7vkyl"),
-"new_animation": SubResource("Animation_wa1ol")
 }
 
 [sub_resource type="Animation" id="Animation_2x3pn"]
@@ -138,21 +153,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, -40), Vector2(0, 0), Vector2(0, -180)]
-}
-
-[sub_resource type="Animation" id="Animation_5xedk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_efl5y"]

@@ -1,9 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://8cg57cuhbb5"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://cenario_7.gd" id="1_0njjd"]
 [ext_resource type="Texture2D" uid="uid://cwwm6gx36bsjv" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_5ayby"]
 [ext_resource type="AudioStream" uid="uid://jdmnxb5ebhlt" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
+=======
+[ext_resource type="Texture2D" uid="uid://c6g3e78to7nw1" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_5ayby"]
+[ext_resource type="AudioStream" uid="uid://b2msv7gldoq48" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
+>>>>>>> Stashed changes
 
 [node name="cenario_7" type="Node2D"]
 script = ExtResource("1_0njjd")

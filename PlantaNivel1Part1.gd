@@ -1,5 +1,6 @@
-extends Node2D
+extends Sprite2D
 
+@onready var animatedSprite= $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +12,9 @@ func _process(delta):
 	pass
 
 
+func _on_button_button_up():
+	animatedSprite.play("new_animation")
 
 
-func _on_final_body_entered(body):
-	var player = get_node("Player")
-	get_tree().change_scene_to_file("")
-	
+func _on_animation_player_animation_finished(anim_name):
+	animatedSprite.stop("new_animation")

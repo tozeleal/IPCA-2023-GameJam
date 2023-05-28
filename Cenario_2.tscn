@@ -1,21 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcpvv7yi6kj76"]
+[gd_scene load_steps=9 format=3 uid="uid://bcpvv7yi6kj76"]
 
-[ext_resource type="Texture2D" uid="uid://cot43xfa6uaqy" path="res://cenarios/cenario2.jpg" id="1_2wr5o"]
-[ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="2_eprv5"]
+[ext_resource type="Texture2D" uid="uid://buw3x8lyl3xoo" path="res://cenarios/cenario2.jpg" id="1_2wr5o"]
+[ext_resource type="Script" path="res://Cenario_2.gd" id="1_tb81y"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="3_40aek"]
-[ext_resource type="AudioStream" uid="uid://dmas4linpymn1" path="res://assets/Music/calma.mp3" id="4_f0a88"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_c7r7v"]
+[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="4_f0a88"]
+[ext_resource type="Script" path="res://CollisionPolygon2D.gd" id="4_p34lm"]
+[ext_resource type="PackedScene" uid="uid://cwurvtv4jrft4" path="res://area_2d.tscn" id="7_wfpho"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2t40g"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_tb81y")
 
 [node name="Cenario2" type="Sprite2D" parent="."]
 position = Vector2(638.222, 364.5)
 scale = Vector2(0.663889, 0.663889)
 texture = ExtResource("1_2wr5o")
-
-[node name="place_holder_plataform" parent="." instance=ExtResource("2_eprv5")]
-position = Vector2(215, 877)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_2t40g")
@@ -44,9 +45,24 @@ polygon = PackedVector2Array(1274, 576, 1227, 577, 1227, 601, 1182, 600, 1180, 6
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(622, 340, 670, 451, 776, 511, 721, 433)
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(85, 378)
+script = ExtResource("3_c7r7v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-18, -2)
+polygon = PackedVector2Array(1180, 201, 1206, 119, 1178, -24, 1186, 126)
+script = ExtResource("4_p34lm")
+
 [node name="Player" parent="." instance=ExtResource("3_40aek")]
-position = Vector2(87, 367)
+position = Vector2(64, 376)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_f0a88")
 autoplay = true
+
+[node name="Area2D2" parent="." instance=ExtResource("7_wfpho")]
+position = Vector2(624, 737)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

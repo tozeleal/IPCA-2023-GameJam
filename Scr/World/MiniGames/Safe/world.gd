@@ -8,4 +8,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var c = get_node("Sprite2D")
+	var c2 = get_node("Sprite2D2")
+	var c3 = get_node("Sprite2D3")
+	var c4 = get_node("Sprite2D4")
+	if c.value*1000 + c2.value*100 + c3.value*10 + c4.value == SceneManager.code:
+			get_tree().change_scene_to_file("res://cenario_4.tscn")
+
+
+func _on_button_button_up():
+	get_tree().change_scene_to_file("res://cenario_3.tscn")
