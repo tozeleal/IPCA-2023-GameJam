@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://8cg57cuhbb5"]
 
-[ext_resource type="Texture2D" uid="uid://c7gxmc15cg40a" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_5ayby"]
-[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
+[ext_resource type="Texture2D" uid="uid://cwwm6gx36bsjv" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_5ayby"]
+[ext_resource type="AudioStream" uid="uid://jdmnxb5ebhlt" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
 
 [node name="cenario_7" type="Node2D"]
 
