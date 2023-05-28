@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://chh56icpjw8gm"]
+[gd_scene load_steps=7 format=3 uid="uid://chh56icpjw8gm"]
 
 [ext_resource type="Texture2D" uid="uid://boxonf2byau7x" path="res://cenarios/cenario1.jpg" id="1_lw8ga"]
 [ext_resource type="Script" path="res://cenario_1.gd" id="1_ppgv5"]
@@ -62,29 +62,18 @@ scale = Vector2(0.683, 0.276)
 
 [node name="place_holder_plataform5" parent="." instance=ExtResource("3_n3t5x")]
 visible = false
-position = Vector2(1245, 505)
-scale = Vector2(0.683, 0.276)
-
-[node name="Button" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-z_index = -1
-texture_filter = 1
-offset_left = 734.0
-offset_top = 247.0
-offset_right = 1036.0
-offset_bottom = 386.0
-icon = ExtResource("4_kldt8")
-script = ExtResource("5_mtfcs")
+position = Vector2(1266, 499)
+scale = Vector2(0.737, 0.301)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_mq6qd")
 autoplay = true
 
 [node name="enemy" parent="." instance=ExtResource("7_lt00y")]
+visible = false
 position = Vector2(104, 525)
 scale = Vector2(0.15, 0.15)
 
-[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
 [connection signal="body_entered" from="enemy/CharacterBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
 
 [editable path="enemy"]

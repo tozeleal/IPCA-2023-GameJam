@@ -12,9 +12,11 @@ func seek_player():
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	match state:
 		wander:
 			pass
 		jump:
 			pass
+			
+	

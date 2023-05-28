@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c0ku2gbhir86y"]
 
 [ext_resource type="Script" path="res://Scr/World/MiniGames/Example/NextMap.gd" id="1_ti6nb"]
-[ext_resource type="PackedScene" uid="uid://bmet3drtv2bau" path="res://Scr/Player/player.tscn" id="2_cj8jp"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_cj8jp"]
 [ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="3_kg3pf"]
 [ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="4_3hg5w"]
 [ext_resource type="PackedScene" uid="uid://c6v23l0sv7agl" path="res://Scr/World/Buttons/ButtonPlataform.tscn" id="5_1lle1"]
@@ -14,7 +14,7 @@ y_sort_enabled = true
 script = ExtResource("1_ti6nb")
 
 [node name="Player" parent="." instance=ExtResource("2_cj8jp")]
-position = Vector2(56, 106)
+position = Vector2(159, 97)
 
 [node name="Plataforms" type="Node2D" parent="."]
 position = Vector2(176, 394)

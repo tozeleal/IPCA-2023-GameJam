@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6ybihxtpw2tq"]
+[gd_scene load_steps=4 format=3 uid="uid://c6ybihxtpw2tq"]
 
 [ext_resource type="Script" path="res://Scr/World/MiniGames/Safe/world.gd" id="1_qxmhw"]
 [ext_resource type="PackedScene" uid="uid://cyv8yp55waa3c" path="res://Scr/World/MiniGames/Safe/sprite_2d.tscn" id="2_j7264"]
+[ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="3_e837i"]
 
 [node name="World" type="Node2D"]
 script = ExtResource("1_qxmhw")
@@ -17,3 +18,12 @@ position = Vector2(944, 350)
 
 [node name="Sprite2D4" parent="." instance=ExtResource("2_j7264")]
 position = Vector2(739, 350)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 36.0
+offset_top = 7.0
+offset_right = 172.0
+offset_bottom = 143.0
+icon = ExtResource("3_e837i")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

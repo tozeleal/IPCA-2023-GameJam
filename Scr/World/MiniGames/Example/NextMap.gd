@@ -15,4 +15,5 @@ func _process(delta):
 
 func _on_final_body_entered(body):
 	var player = get_node("Player")
-	get_tree().change_scene_to_file("res://Scr/World/world.tscn")
+	get_tree().change_scene_to_file("")
+	
