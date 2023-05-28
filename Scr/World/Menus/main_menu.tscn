@@ -19,8 +19,8 @@ scale = Vector2(0.667593, 0.667593)
 texture = ExtResource("2_la8uo")
 
 [node name="TittleSprite" type="Sprite2D" parent="."]
-position = Vector2(109, -329)
-scale = Vector2(0.111458, 0.111458)
+position = Vector2(-416, -750)
+scale = Vector2(0.211, 0.211)
 texture = ExtResource("3_vm01h")
 centered = false
 offset = Vector2(2835.14, 2906.92)
@@ -30,10 +30,10 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 61.0
-offset_top = -222.28
-offset_right = 258.72
-offset_bottom = -4.0
+offset_left = 545.0
+offset_top = -161.0
+offset_right = 742.72
+offset_bottom = 57.28
 grow_vertical = 0
 
 [node name="StartGameButton" type="Button" parent="VBoxContainer"]
