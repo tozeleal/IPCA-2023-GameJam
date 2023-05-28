@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmg14m6unksyq"]
+[gd_scene load_steps=4 format=3 uid="uid://dmg14m6unksyq"]
 
 [ext_resource type="Script" path="res://Scr/World/Menus/main_menu.gd" id="1_eybty"]
 [ext_resource type="Texture2D" uid="uid://c4ur5p0hpy7sl" path="res://assets/sprites/ground/TittleBlur.jpg" id="2_la8uo"]
+[ext_resource type="Texture2D" uid="uid://c32vomx48qaio" path="res://assets/sprites/ground/TittleMenu.png" id="3_vm01h"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,10 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_eybty")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(643.778, 361.5)
 scale = Vector2(0.667593, 0.667593)
 texture = ExtResource("2_la8uo")
+
+[node name="TittleSprite" type="Sprite2D" parent="."]
+position = Vector2(109, -329)
+scale = Vector2(0.111458, 0.111458)
+texture = ExtResource("3_vm01h")
+centered = false
+offset = Vector2(2835.14, 2906.92)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
