@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bmdjyc564tr55"]
+[gd_scene load_steps=3 format=3 uid="uid://c6ybihxtpw2tq"]
 
 [ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="1_2sjf2"]
-[ext_resource type="PackedScene" uid="uid://bjwtk1frld4sx" path="res://sprite_2d.tscn" id="2_j7264"]
+[ext_resource type="PackedScene" uid="uid://cyv8yp55waa3c" path="res://Scr/World/MiniGames/Safe/sprite_2d.tscn" id="2_j7264"]
 
 [node name="World" type="Node2D"]
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1tr8k6s72xmn"]
+
+[ext_resource type="PackedScene" uid="uid://cjlrohw5gwomj" path="res://Scr/World/MiniGames/Drag and Drop/object.tscn" id="1_yagr6"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Object" parent="." instance=ExtResource("1_yagr6")]
+position = Vector2(306, 211)
