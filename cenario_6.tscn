@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://5q3s2yb3hahy"]
 
-[ext_resource type="Texture2D" uid="uid://drwob28bmdm1k" path="res://cenarios/cenario6.jpg" id="1_7gm56"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_cebi7"]
-[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="3_fe76x"]
+[ext_resource type="Texture2D" uid="uid://dboicmo6uapeb" path="res://cenarios/cenario6.jpg" id="1_7gm56"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_cebi7"]
+[ext_resource type="AudioStream" uid="uid://tvckpu4np50n" path="res://castle_simple.wav" id="3_abicp"]
 
 [node name="cenario_6" type="Node2D"]
 
@@ -25,5 +25,6 @@ polygon = PackedVector2Array(-658.83, 0, 57.1589, -6.01666, 57.1589, 123.343, -6
 [node name="Player" parent="." instance=ExtResource("2_cebi7")]
 position = Vector2(33, 458)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_fe76x")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_abicp")
+autoplay = true

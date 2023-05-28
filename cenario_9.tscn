@@ -1,5 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cj4vqy68fac38"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://cenario_9.gd" id="1_n6ibi"]
 [ext_resource type="Texture2D" uid="uid://b1vy4xi2vjkg8" path="res://cenarios/cenario9.jpg" id="1_wpjsj"]
 [ext_resource type="AudioStream" uid="uid://c2uo3ujvtbkyg" path="res://assets/Music/Final.mp3" id="2_flq7p"]
@@ -71,6 +72,10 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7p1b"]
 size = Vector2(228, 105)
+=======
+[ext_resource type="Texture2D" uid="uid://ct2l2lhprgcjs" path="res://cenarios/cenario9.jpg" id="1_wpjsj"]
+[ext_resource type="AudioStream" uid="uid://wtesn3ep2xy7" path="res://castle_3.wav" id="2_fymqf"]
+>>>>>>> Stashed changes
 
 [node name="cenario_9" type="Node2D"]
 script = ExtResource("1_n6ibi")
@@ -91,6 +96,7 @@ polygon = PackedVector2Array(951, -208.5, 778.5, -214.5, 745.5, 129, 616.5, 159,
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario9/StaticBody2D"]
 polygon = PackedVector2Array(-760.5, -60, -601.5, -57, -687, -6)
 
+<<<<<<< Updated upstream
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_flq7p")
 
@@ -130,3 +136,7 @@ position = Vector2(323, 1089)
 shape = SubResource("RectangleShape2D_c7p1b")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+=======
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_fymqf")
+>>>>>>> Stashed changes

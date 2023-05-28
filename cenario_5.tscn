@@ -1,10 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://dr8c4bfufmmc0"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://dr15hj7et2f6x" path="res://cenarios/cenario5.jpg" id="1_f0d07"]
 [ext_resource type="Script" path="res://cenario_5.gd" id="1_mlq7a"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_uhnx7"]
 [ext_resource type="AudioStream" uid="uid://ctxey2816vaek" path="res://assets/Music/floresta.mp3" id="3_8gk4w"]
 [ext_resource type="PackedScene" uid="uid://cwurvtv4jrft4" path="res://area_2d.tscn" id="5_06nah"]
+=======
+[ext_resource type="Texture2D" uid="uid://ci5ic1stose3x" path="res://cenarios/cenario5.jpg" id="1_f0d07"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_uhnx7"]
+[ext_resource type="AudioStream" uid="uid://fogxh3yn3wot" path="res://forest_but_faster.wav" id="3_7y1j8"]
+>>>>>>> Stashed changes
 
 [node name="cenario_5" type="Node2D"]
 script = ExtResource("1_mlq7a")
@@ -104,6 +110,7 @@ polygon = PackedVector2Array(-503.598, 428.535, -521.673, 332.134, -431.297, 280
 [node name="Player" parent="." instance=ExtResource("2_uhnx7")]
 position = Vector2(43, 500)
 
+<<<<<<< Updated upstream
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_8gk4w")
 
@@ -118,3 +125,8 @@ polygon = PackedVector2Array(1231, 414, 1226, 588, 1258, 509)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+=======
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7y1j8")
+autoplay = true
+>>>>>>> Stashed changes

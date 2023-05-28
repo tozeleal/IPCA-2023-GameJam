@@ -1,13 +1,36 @@
 [gd_scene load_steps=21 format=3 uid="uid://b7dpneqxbatu7"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://c378vo0tl85lr" path="res://cenarios/cenario8.jpg" id="1_737wl"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
 [ext_resource type="Texture2D" uid="uid://btkdev7q1c25c" path="res://Obstaculo.png" id="3_g4uh3"]
 [ext_resource type="Script" path="res://Obstaculo1.gd" id="3_odkct"]
 [ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
+=======
+[ext_resource type="Texture2D" uid="uid://dhq7dnsbwc1ee" path="res://cenarios/cenario8.jpg" id="1_737wl"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
+[ext_resource type="Texture2D" uid="uid://mqh5uhvqmipg" path="res://Obstaculo.png" id="3_g4uh3"]
+[ext_resource type="Script" path="res://Obstaculo1.gd" id="3_odkct"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://Obstaculo2.gd" id="5_1nvox"]
 [ext_resource type="Script" path="res://Obstaculo3.gd" id="6_34ipb"]
 [ext_resource type="Script" path="res://Obstaculo4.gd" id="7_s6ybs"]
+[ext_resource type="AudioStream" uid="uid://wdhgyg2wlinv" path="res://castle_with_leads.wav" id="8_g2eow"]
+
+[sub_resource type="Animation" id="Animation_j8lyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_j8lyd"]
 length = 0.001
@@ -252,5 +275,6 @@ libraries = {
 "": SubResource("AnimationLibrary_efl5y")
 }
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_i0bye")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_g2eow")
+autoplay = true
