@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmivrotxjqopl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_leuli"]
+specular_color = Color(0.643137, 0.286275, 0.941176, 1)
+texture_filter = 1
+
+[node name="PlaceHolderArea" type="Area2D"]
+z_index = -3
+position = Vector2(575, 351)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.513726, 0.596078, 0.984314, 1)
+z_index = -3
+scale = Vector2(141, 668)
+texture = SubResource("CanvasTexture_leuli")

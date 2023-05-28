@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cyv8yp55waa3c"]
+[gd_scene load_steps=7 format=3 uid="uid://cyv8yp55waa3c"]
 
 [ext_resource type="Texture2D" uid="uid://dbwkeomosu0c6" path="res://numeros.png" id="1_alup6"]
 [ext_resource type="Script" path="res://Scr/World/MiniGames/Safe/Sprite2D.gd" id="2_alk1f"]
@@ -14,12 +14,14 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
+"update": 0,
 "values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_o24js"]
 resource_name = "muda"
+length = 0.9
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,7 +29,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -39,6 +41,9 @@ _data = {
 "muda": SubResource("Animation_o24js")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgxns"]
+size = Vector2(131, 164)
+
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(183, 135)
 texture = ExtResource("1_alup6")
@@ -48,8 +53,17 @@ frame = 1
 script = ExtResource("2_alk1f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_6rhjp")
 }
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_rgxns")
+
 [connection signal="frame_changed" from="." to="." method="_on_frame_changed"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
