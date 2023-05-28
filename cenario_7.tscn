@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://8cg57cuhbb5"]
+[gd_scene load_steps=5 format=3 uid="uid://8cg57cuhbb5"]
 
+[ext_resource type="Script" path="res://cenario_7.gd" id="1_0njjd"]
 [ext_resource type="Texture2D" uid="uid://cwwm6gx36bsjv" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
 [ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_5ayby"]
 [ext_resource type="AudioStream" uid="uid://jdmnxb5ebhlt" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
 
 [node name="cenario_7" type="Node2D"]
+script = ExtResource("1_0njjd")
 
 [node name="Cenario7" type="Sprite2D" parent="."]
 position = Vector2(642, 361)
@@ -17,6 +19,7 @@ texture = ExtResource("1_nacwy")
 polygon = PackedVector2Array(-966, 342, -600, 345, -600, 534)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+position = Vector2(4.5, 6)
 polygon = PackedVector2Array(-555, 537, -555, 310.5, -523.5, 316.5, -522, 531)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
