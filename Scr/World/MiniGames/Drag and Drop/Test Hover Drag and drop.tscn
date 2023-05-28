@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccir0relb0gq0"]
+[gd_scene load_steps=4 format=3 uid="uid://b70t5un6or8ai"]
 
-[ext_resource type="PackedScene" uid="uid://ctutvtkmwqe7s" path="res://Src/object.tscn" id="1_eoeai"]
+[ext_resource type="PackedScene" uid="uid://cjlrohw5gwomj" path="res://Scr/World/MiniGames/Drag and Drop/object.tscn" id="1_3euc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knsyt"]
 size = Vector2(154, 101)
@@ -21,6 +21,5 @@ position = Vector2(244.5, 77.5)
 scale = Vector2(0.330078, 0.212891)
 texture = SubResource("NoiseTexture2D_jkpx0")
 
-[node name="Object" parent="." instance=ExtResource("1_eoeai")]
-
-[connection signal="area_entered" from="Area2D" to="Object" method="_on_area_2d_area_entered"]
+[node name="Object" parent="." instance=ExtResource("1_3euc0")]
+position = Vector2(529, 280)

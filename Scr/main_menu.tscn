@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://din1ondu3xhnd"]
+
+[ext_resource type="Script" path="res://Src/main_menu.gd" id="1_mdggx"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchor_left = -0.00078125
+anchor_right = 0.999219
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdggx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 61.0
+offset_top = -222.28
+offset_right = 258.72
+offset_bottom = -4.0
+grow_vertical = 0
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start Game"
+metadata/Start = false
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartGameButton" to="VBoxContainer" method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="VBoxContainer" method="_on_controls_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsButton" to="VBoxContainer" method="_on_credits_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="VBoxContainer" method="_on_exit_button_pressed"]

@@ -2,32 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-<<<<<<< HEAD
-uid="uid://cstf4kkjj6ju7"
-=======
-<<<<<<< HEAD
-uid="uid://c30w1qqwh3oev"
-=======
-<<<<<<< HEAD
-uid="uid://beyrmfam6817i"
-=======
-uid="uid://ct2ifu21ulfe4"
->>>>>>> main
->>>>>>> main
->>>>>>> main
-=======
-uid="uid://b4qirn50gn1lu"
->>>>>>> main
-path="res://.godot/imported/stressed1.png-f2b226cfd1c4622d40ae165a8679472f.ctex"
+uid="uid://ygwsluq4l8c5"
+path="res://.godot/imported/arrows.png-5537e8c8df9fa1fdb96d9e7a1bd0a400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/player/walk/stressed1.png"
-dest_files=["res://.godot/imported/stressed1.png-f2b226cfd1c4622d40ae165a8679472f.ctex"]
+source_file="res://assets/sprites/keyboard/arrows.png"
+dest_files=["res://.godot/imported/arrows.png-5537e8c8df9fa1fdb96d9e7a1bd0a400.ctex"]
 
 [params]
 
