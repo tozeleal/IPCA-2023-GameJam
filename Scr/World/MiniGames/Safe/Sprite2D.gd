@@ -6,7 +6,6 @@ var mouseIn = false
 var value = 1
 
 enum{
-	WheelDown,
 	WheelUp,
 	Stop
 }
@@ -19,26 +18,32 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	print(wheelState)
-	print(value)
-	
-	if wheelState == WheelDown:
-		value -= 1
-		animatedSprite.play_backwards("muda")
-	elif wheelState == WheelUp:
-		value += 1
-		animatedSprite.play("muda")
-		
-	wheelState = Stop
+	if value == 9:
+		value = 0
+
+var first = true
+var second2 = true
 
 func _input(event):
-	if mouseIn and event is InputEventMouseButton:
+	if mouseIn and event is InputEventMouseButton and wheelState == Stop:
 		var mouse_event = event as InputEventMouseButton
-		if mouse_event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			wheelState = WheelDown
-		if mouse_event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		if mouse_event.button_index == MOUSE_BUTTON_LEFT:
 			wheelState = WheelUp
+		wheelMove()
 
+
+func wheelMove():
+	if wheelState == WheelUp:
+		wheelState = Stop
+		value += 0.5
+		if first:
+			value = -0.5
+		elif second2:
+			second2 = false
+		
+		if !first:
+			animatedSprite.play("muda")
+		first = false
 
 func _on_frame_changed():
 	animatedSprite.pause()
