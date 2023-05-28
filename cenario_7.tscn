@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://8cg57cuhbb5"]
+
+[ext_resource type="Texture2D" uid="uid://c7gxmc15cg40a" path="res://cenarios/cenario7.jpg" id="1_nacwy"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_5ayby"]
+[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="3_ishui"]
+
+[node name="cenario_7" type="Node2D"]
+
+[node name="Cenario7" type="Sprite2D" parent="."]
+position = Vector2(642, 361)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_nacwy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario7"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(-966, 342, -600, 345, -600, 534)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(-555, 537, -555, 310.5, -523.5, 316.5, -522, 531)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(-472.5, 537, -472.5, 265.5, -447, 265.5, -445.5, 537)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(-399, 531, -399, 199.5, -373.5, 202.5, -369, 537)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(-292.5, 537, -292.5, 148.5, -79.5, 151.5, -73.5, 211.5, -6, 222, -3, 276, 67.4999, 291, 61.4999, 352.5, 127.5, 358.5, 141, 418.5, 214.5, 426, 214.5, 525)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Cenario7/StaticBody2D"]
+polygon = PackedVector2Array(954, -60, 820.5, -60, 814.5, 16.5, 741, 16.5, 747, 84, 667.5, 84, 676.5, 144, 603, 145.5, 603, 211.5, 535.5, 211.5, 535.5, 285, 469.5, 288, 463.5, 349.5, 390, 361.5, 390, 418.5, 316.5, 421.5, 313.5, 531, 963, 540)
+
+[node name="Player" parent="." instance=ExtResource("2_5ayby")]
+position = Vector2(62, 502)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ishui")

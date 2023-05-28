@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj4vqy68fac38"]
+
+[ext_resource type="Texture2D" uid="uid://b1vy4xi2vjkg8" path="res://cenarios/cenario9.jpg" id="1_wpjsj"]
+[ext_resource type="AudioStream" uid="uid://c2uo3ujvtbkyg" path="res://assets/Music/Final.mp3" id="2_flq7p"]
+
+[node name="cenario_9" type="Node2D"]
+
+[node name="Cenario9" type="Sprite2D" parent="."]
+position = Vector2(644, 362)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_wpjsj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario9"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario9/StaticBody2D"]
+polygon = PackedVector2Array(-966, -57, -885, -57, -877.5, 535.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario9/StaticBody2D"]
+polygon = PackedVector2Array(951, -208.5, 778.5, -214.5, 745.5, 129, 616.5, 159, 616.5, 367.5, -798, 384, -798, 526.5, 957, 543)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario9/StaticBody2D"]
+polygon = PackedVector2Array(-760.5, -60, -601.5, -57, -687, -6)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_flq7p")

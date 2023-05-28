@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://ttfcspedrwfr"]
+
+[ext_resource type="Texture2D" uid="uid://byhkrskf02sq6" path="res://cenarios/cenario4.jpg" id="1_w3ndo"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_foxeu"]
+[ext_resource type="AudioStream" uid="uid://ctxey2816vaek" path="res://assets/Music/floresta.mp3" id="3_i2cro"]
+
+[node name="cenario_4" type="Node2D"]
+
+[node name="Cenario4" type="Sprite2D" parent="."]
+position = Vector2(637.444, 363)
+scale = Vector2(0.662963, 0.662963)
+texture = ExtResource("1_w3ndo")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario4/StaticBody2D"]
+polygon = PackedVector2Array(-349.106, 536.983, -349.106, -162.905, -560.279, -165.922, -560.279, -114.637, -608.547, -105.587, -605.531, -57.3184, -659.832, -37.7095, -659.832, 13.5754, -711.117, 25.6425, -711.117, 79.9442, -768.436, 82.9609, -768.436, 144.804, -813.687, 159.888, -813.687, 211.173, -854.413, 221.732, -857.43, 271.508, -908.715, 288.101, -908.715, 336.369, -960, 358.994)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario4/StaticBody2D"]
+polygon = PackedVector2Array(177.318, 536.983, 180.335, -165.922, 382.458, -162.905, 388.492, -108.603, 439.776, -101.061, 436.76, -40.7263, 480.503, -34.6927, 480.503, 16.5922, 531.788, 28.6592, 534.804, 79.9442, 589.106, 87.486, 589.106, 156.872, 631.341, 159.888, 637.374, 221.732, 676.592, 217.207, 682.626, 282.067, 733.911, 294.134, 730.894, 345.419, 951.117, 348.436)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario4/StaticBody2D"]
+polygon = PackedVector2Array(-260.112, -165.922, -220.894, -131.229, -186.201, -165.922)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Cenario4/StaticBody2D"]
+position = Vector2(278.38, 1.50836)
+polygon = PackedVector2Array(-260.112, -165.922, -220.894, -131.229, -186.201, -165.922)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Cenario4/StaticBody2D"]
+position = Vector2(135.084, 3.01678)
+polygon = PackedVector2Array(-260.112, -165.922, -220.894, -131.229, -186.201, -165.922)
+
+[node name="Player" parent="." instance=ExtResource("2_foxeu")]
+position = Vector2(17, 501)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_i2cro")
+autoplay = true

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://7n5v20qijbgf"]
+
+[ext_resource type="Texture2D" uid="uid://b72hxln7gk8s3" path="res://cenarios/cenario3.jpg" id="1_1bhsh"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_qt0ut"]
+[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="3_chneo"]
+
+[node name="Cenario_3" type="Node2D"]
+
+[node name="Cenario3" type="Sprite2D" parent="."]
+position = Vector2(643, 359)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_1bhsh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario3/StaticBody2D"]
+polygon = PackedVector2Array(-963, 324, -894, 321, -891, 352.5, -823.5, 352.5, -822, 373.5, -750, 378, -748.5, 397.5, -679.5, 397.5, -675, 430.5, -450, 433.5, -448.5, 537)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario3/StaticBody2D"]
+polygon = PackedVector2Array(-376.5, 537, -378, 435, -54, 436.5, -51, 537)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario3/StaticBody2D"]
+polygon = PackedVector2Array(954, 175.5, 538.5, 174, 537, 240, 468, 240, 463.5, 301.5, 399, 303, 399, 372, 322.5, 372, 324, 436.5, 77.9999, 436.5, 77.9999, 537)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Cenario3/StaticBody2D"]
+polygon = PackedVector2Array(-310.5, 64.5, -261, 106.5, -213, 46.5, -175.5, 114, -141, 37.5, -45, 82.5, -6, -3, -37.5, -78, 68.9999, -93, 85.4999, -174, -348, -75, -355.5, 28.5)
+
+[node name="Player" parent="." instance=ExtResource("2_qt0ut")]
+position = Vector2(83, 494)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_chneo")
+autoplay = true

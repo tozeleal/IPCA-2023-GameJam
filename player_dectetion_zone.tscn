@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bwotqli1a3dup"]
+
+[node name="PlayerDectetionZone" type="Area2D"]

@@ -13,4 +13,5 @@ func _process(_delta):
  # Replace with function body.
 
 func _on_button_up():
-	
+	print("a")
+	get_tree().change_scene_to_file("res://Cenario_2.tscn")

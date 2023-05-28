@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcpvv7yi6kj76"]
+
+[ext_resource type="Texture2D" uid="uid://buw3x8lyl3xoo" path="res://cenarios/cenario2.jpg" id="1_2wr5o"]
+[ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="2_eprv5"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="3_40aek"]
+[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="4_f0a88"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2t40g"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cenario2" type="Sprite2D" parent="."]
+position = Vector2(638.222, 364.5)
+scale = Vector2(0.663889, 0.663889)
+texture = ExtResource("1_2wr5o")
+
+[node name="place_holder_plataform" parent="." instance=ExtResource("2_eprv5")]
+position = Vector2(215, 877)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_2t40g")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-2, 480, 276, 483, 280, 520, 322, 524, 326, 564, 364, 567, 369, 605, 416, 609, 422, 651, 553, 652, 556, 724)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(595, 654, 620.587, 654.522, 644, 655, 618, 660)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(267, -2)
+polygon = PackedVector2Array(595, 654, 644, 655, 618, 660)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(187, -2)
+polygon = PackedVector2Array(595, 654, 644, 655, 618, 660)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(93, -1)
+polygon = PackedVector2Array(595, 654, 644, 655, 618, 660)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(1274, 576, 1227, 577, 1227, 601, 1182, 600, 1180, 616, 1132, 616, 1132, 632, 1083, 630, 1083, 651, 931, 652, 930, 721)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(622, 340, 670, 451, 776, 511, 721, 433)
+
+[node name="Player" parent="." instance=ExtResource("3_40aek")]
+position = Vector2(87, 367)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f0a88")
+autoplay = true

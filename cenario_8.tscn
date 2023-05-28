@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7dpneqxbatu7"]
+
+[ext_resource type="Texture2D" uid="uid://c378vo0tl85lr" path="res://cenarios/cenario8.jpg" id="1_737wl"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_fqdxa"]
+[ext_resource type="Texture2D" uid="uid://btkdev7q1c25c" path="res://Obstaculo.png" id="3_g4uh3"]
+[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="4_i0bye"]
+
+[node name="cenario_8" type="Node2D"]
+
+[node name="Cenario8" type="Sprite2D" parent="."]
+position = Vector2(641.222, 362)
+scale = Vector2(0.664815, 0.664815)
+texture = ExtResource("1_737wl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario8"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario8/StaticBody2D"]
+polygon = PackedVector2Array(-967.521, 538.496, -963.008, -61.6713, -740.39, -58.6629, -737.382, 311.365, -522.284, 315.877, -522.284, -55.6546, -283.12, -52.6462, -277.103, 293.315, -83.0641, 309.861, -72.5349, -52.6462, 144.067, -64.6796, 148.579, 299.331, 359.164, 315.877, 365.181, -64.6796, 598.329, -58.6629, 614.875, 299.331, 813.426, 303.844, 825.46, -58.6629, 956.323, -52.6462, 972.869, 530.975)
+
+[node name="Player" parent="." instance=ExtResource("2_fqdxa")]
+position = Vector2(74, 225)
+
+[node name="Obstaculo" type="Sprite2D" parent="."]
+position = Vector2(222, 268)
+rotation = 1.5708
+texture = ExtResource("3_g4uh3")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo/StaticBody2D"]
+polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
+
+[node name="Obstaculo2" type="Sprite2D" parent="."]
+position = Vector2(1126, 259)
+rotation = 1.5708
+texture = ExtResource("3_g4uh3")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo2/StaticBody2D"]
+polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
+
+[node name="Obstaculo3" type="Sprite2D" parent="."]
+position = Vector2(824, 266)
+rotation = 1.5708
+texture = ExtResource("3_g4uh3")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo3/StaticBody2D"]
+polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
+
+[node name="Obstaculo4" type="Sprite2D" parent="."]
+position = Vector2(535, 266)
+rotation = 1.5708
+texture = ExtResource("3_g4uh3")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Obstaculo4"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstaculo4/StaticBody2D"]
+polygon = PackedVector2Array(178, 5, 174, -2, 287, -3.00002, 283, 13)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_i0bye")

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://5q3s2yb3hahy"]
+
+[ext_resource type="Texture2D" uid="uid://drwob28bmdm1k" path="res://cenarios/cenario6.jpg" id="1_7gm56"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_cebi7"]
+[ext_resource type="AudioStream" uid="uid://ceck152xcbd4y" path="res://assets/Music/Partes_Castelo.mp3" id="3_fe76x"]
+
+[node name="cenario_6" type="Node2D"]
+
+[node name="Cenario6" type="Sprite2D" parent="."]
+position = Vector2(641, 362)
+scale = Vector2(0.664815, 0.664815)
+texture = ExtResource("1_7gm56")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario6"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cenario6/StaticBody2D"]
+polygon = PackedVector2Array(-959.666, 288.802, -842.34, 279.777, -842.34, 351.978, -712.98, 354.986, -712.98, 433.203, 138.385, 433.203, 138.385, 529.471, -965.682, 538.496)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Cenario6/StaticBody2D"]
+polygon = PackedVector2Array(956.658, 174.485, 694.93, 174.485, 691.922, 243.677, 622.73, 240.669, 619.722, 303.844, 550.529, 306.852, 556.546, 367.02, 481.337, 370.028, 478.329, 436.212, 234.652, 436.212, 234.652, 535.487, 950.641, 535.487)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Cenario6/StaticBody2D"]
+polygon = PackedVector2Array(-658.83, 0, 57.1589, -6.01666, 57.1589, 123.343, -661.838, 132.368)
+
+[node name="Player" parent="." instance=ExtResource("2_cebi7")]
+position = Vector2(33, 458)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fe76x")

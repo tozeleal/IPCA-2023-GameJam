@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var animatedSprite= $AnimationPlayer
 
 const SPEED = 400.0
 const JUMP_VELOCITY = -600.0
@@ -13,11 +14,14 @@ enum{
 }
 var state = MOVE_RIGHT
 
+func _ready():
+	set_process_input(true)
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += (gravity + 100) * delta
-
+		
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -36,9 +40,21 @@ func _physics_process(delta):
 	elif direction > 0 && state != MOVE_RIGHT:
 		state = MOVE_RIGHT
 		scale.x *= -1
+	if(direction==0):
+		animatedSprite.pause()
+	
 		
 
 	move_and_slide()
 
 func savePosition():
 	SceneManager.PlayerPosition = position
+	
+func _input(event):
+	if event is InputEventKey:
+		var _key_event = event as InputEventKey
+		if Input.is_action_just_pressed("ui_up"):
+			animatedSprite.play_backwards("jump")
+		elif Input.is_action_just_pressed("ui_left") || Input.is_action_just_pressed("ui_right"):
+			animatedSprite.play("andar")
+	

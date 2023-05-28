@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://chh56icpjw8gm"]
+
+[ext_resource type="Texture2D" uid="uid://ddfqjaykquxwi" path="res://cenarios/cenario1.jpg" id="1_lw8ga"]
+[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_gagys"]
+[ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="3_n3t5x"]
+[ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="4_kldt8"]
+[ext_resource type="Script" path="res://Button.gd" id="5_mtfcs"]
+[ext_resource type="AudioStream" uid="uid://bvguf4ayh2wfj" path="res://assets/Music/calma.mp3" id="6_mq6qd"]
+[ext_resource type="PackedScene" uid="uid://d3dgper503ftt" path="res://enemy.tscn" id="7_lt00y"]
+
+[node name="Cenario_1" type="Node2D"]
+
+[node name="Cenario1" type="Sprite2D" parent="."]
+position = Vector2(640.333, 362.75)
+scale = Vector2(0.669444, 0.668981)
+texture = ExtResource("1_lw8ga")
+
+[node name="Player" parent="." instance=ExtResource("2_gagys")]
+position = Vector2(368, 555)
+
+[node name="place_holder_plataform" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(641, 684)
+scale = Vector2(1.817, 0.561)
+
+[node name="place_holder_plataform2" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(1101, 628)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform6" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(-51.9998, 646)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform7" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(-102, 632)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform8" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(-150, 614)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform9" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(-195, 591)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform3" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(1154, 587)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform4" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(1199, 546)
+scale = Vector2(0.683, 0.276)
+
+[node name="place_holder_plataform5" parent="." instance=ExtResource("3_n3t5x")]
+visible = false
+position = Vector2(1245, 505)
+scale = Vector2(0.683, 0.276)
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+texture_filter = 1
+offset_left = 734.0
+offset_top = 247.0
+offset_right = 1036.0
+offset_bottom = 386.0
+icon = ExtResource("4_kldt8")
+script = ExtResource("5_mtfcs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_mq6qd")
+autoplay = true
+
+[node name="Node2D" parent="." instance=ExtResource("7_lt00y")]
+position = Vector2(104, 525)
+scale = Vector2(0.15, 0.15)
+
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
