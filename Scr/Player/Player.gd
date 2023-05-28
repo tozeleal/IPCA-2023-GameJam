@@ -16,6 +16,9 @@ var state = MOVE_RIGHT
 
 func _ready():
 	set_process_input(true)
+	
+func player():
+	pass
 
 func _physics_process(delta):
 	# Add the gravity.

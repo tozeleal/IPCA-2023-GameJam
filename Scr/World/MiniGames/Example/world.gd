@@ -11,12 +11,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
 
-func _on_final_body_entered(body):
+func _on_final_body_entered(_body):
 	var player = get_node("Player")
 	player.savePosition()
 	get_tree().change_scene_to_file("res://Scr/World/MiniGames/Example/miniGameExample.tscn")

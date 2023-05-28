@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://chh56icpjw8gm"]
+[gd_scene load_steps=9 format=3 uid="uid://chh56icpjw8gm"]
 
 [ext_resource type="Texture2D" uid="uid://ddfqjaykquxwi" path="res://cenarios/cenario1.jpg" id="1_lw8ga"]
-[ext_resource type="PackedScene" path="res://Scr/Player/player.tscn" id="2_gagys"]
+[ext_resource type="Script" path="res://cenario_1.gd" id="1_ppgv5"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="2_gagys"]
 [ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="3_n3t5x"]
 [ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="4_kldt8"]
 [ext_resource type="Script" path="res://Button.gd" id="5_mtfcs"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d3dgper503ftt" path="res://enemy.tscn" id="7_lt00y"]
 
 [node name="Cenario_1" type="Node2D"]
+script = ExtResource("1_ppgv5")
 
 [node name="Cenario1" type="Sprite2D" parent="."]
 position = Vector2(640.333, 362.75)
@@ -78,8 +80,11 @@ script = ExtResource("5_mtfcs")
 stream = ExtResource("6_mq6qd")
 autoplay = true
 
-[node name="Node2D" parent="." instance=ExtResource("7_lt00y")]
+[node name="enemy" parent="." instance=ExtResource("7_lt00y")]
 position = Vector2(104, 525)
 scale = Vector2(0.15, 0.15)
 
 [connection signal="button_up" from="Button" to="Button" method="_on_button_up"]
+[connection signal="body_entered" from="enemy/CharacterBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+
+[editable path="enemy"]

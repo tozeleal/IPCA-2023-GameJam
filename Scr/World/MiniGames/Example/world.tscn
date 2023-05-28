@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dsmptswm82ay1"]
 
-[ext_resource type="PackedScene" uid="uid://bmet3drtv2bau" path="res://Scr/Player/player.tscn" id="1_b1f2r"]
+[ext_resource type="PackedScene" uid="uid://d041s5xns6l1p" path="res://Scr/Player/player.tscn" id="1_b1f2r"]
 [ext_resource type="Script" path="res://Scr/World/MiniGames/Example/world.gd" id="1_sy1m7"]
 [ext_resource type="PackedScene" uid="uid://c6v23l0sv7agl" path="res://Scr/World/Buttons/ButtonPlataform.tscn" id="3_plnwp"]
 [ext_resource type="PackedScene" uid="uid://bawmu3nq0632p" path="res://Scr/World/Plataforms/place_holder_plataform.tscn" id="5_1q11h"]
