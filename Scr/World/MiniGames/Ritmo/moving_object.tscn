@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://cs6qdjeigorip"]
 
-[ext_resource type="Texture2D" uid="uid://c3hpqm437axga" path="res://icon.svg" id="1_hb3bw"]
+[ext_resource type="Texture2D" uid="uid://cvppklgxasy17" path="res://Scr/World/MiniGames/Ritmo/bolinhas.png" id="1_j800s"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_otss6"]
 
 [node name="MovingObject" type="AnimatableBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_otss6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_hb3bw")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.833333, 0.833333)
+texture = ExtResource("1_j800s")

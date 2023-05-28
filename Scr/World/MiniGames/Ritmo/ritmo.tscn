@@ -1,21 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://1tr8k6s72xmn"]
+[gd_scene load_steps=7 format=3 uid="uid://1tr8k6s72xmn"]
 
 [ext_resource type="PackedScene" uid="uid://cs6qdjeigorip" path="res://Scr/World/MiniGames/Ritmo/moving_object.tscn" id="1_a8qp0"]
 [ext_resource type="Script" path="res://Scr/World/MiniGames/Ritmo/ritmo.gd" id="1_n5p8g"]
 [ext_resource type="PackedScene" uid="uid://dmivrotxjqopl" path="res://Scr/World/MiniGames/Ritmo/place_holder_area.tscn" id="2_xej6c"]
 [ext_resource type="PackedScene" uid="uid://0bmey7sjig52" path="res://Scr/World/MiniGames/Ritmo/place_holder_middle.tscn" id="3_g2o2s"]
+[ext_resource type="Texture2D" uid="uid://djqlr82g17gmm" path="res://Scr/World/MiniGames/Ritmo/fundo_jogo3.jpg" id="5_3tube"]
+[ext_resource type="Texture2D" uid="uid://crrleb63krxij" path="res://Scr/World/MiniGames/Ritmo/espaço_jogo2.png" id="6_0daw0"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_n5p8g")
 
 [node name="MovingObject" parent="." instance=ExtResource("1_a8qp0")]
-position = Vector2(251, 97)
+position = Vector2(254, 115)
 
 [node name="MovingObject2" parent="." instance=ExtResource("1_a8qp0")]
-position = Vector2(643, 602)
+position = Vector2(642, 598)
 
 [node name="MovingObject3" parent="." instance=ExtResource("1_a8qp0")]
-position = Vector2(1024, 184)
+position = Vector2(1029, 188)
 
 [node name="PlaceHolderArea" parent="." instance=ExtResource("2_xej6c")]
 position = Vector2(643, 350)
@@ -27,19 +29,62 @@ position = Vector2(252, 355)
 position = Vector2(1023, 355)
 
 [node name="PlaceHolderMiddle" parent="." instance=ExtResource("3_g2o2s")]
+z_index = -4
 position = Vector2(252, 355)
 
+[node name="Sprite2D" parent="PlaceHolderMiddle" index="0"]
+z_index = -4
+
 [node name="Button" parent="PlaceHolderMiddle" index="1"]
+z_index = -4
 metadata/_edit_use_anchors_ = true
 
 [node name="PlaceHolderMiddle2" parent="." instance=ExtResource("3_g2o2s")]
+z_index = -4
 position = Vector2(643, 350)
 
 [node name="Button" parent="PlaceHolderMiddle2" index="1"]
 metadata/_edit_use_anchors_ = true
 
 [node name="PlaceHolderMiddle3" parent="." instance=ExtResource("3_g2o2s")]
+z_index = -4
 position = Vector2(1023, 355)
+
+[node name="Button" parent="PlaceHolderMiddle3" index="1"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="FundoJogo3" type="Sprite2D" parent="."]
+z_index = -25
+position = Vector2(640, 360)
+scale = Vector2(0.851852, 0.851852)
+texture = ExtResource("5_3tube")
+metadata/_edit_lock_ = true
+
+[node name="EspaçoJogo2" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(125, 362)
+scale = Vector2(0.648814, 0.81713)
+texture = ExtResource("6_0daw0")
+hframes = 3
+metadata/_edit_lock_ = true
+
+[node name="EspaçoJogo3" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(511, 358)
+scale = Vector2(0.648814, 0.81713)
+texture = ExtResource("6_0daw0")
+hframes = 3
+metadata/_edit_lock_ = true
+
+[node name="EspaçoJogo4" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(897, 360)
+scale = Vector2(0.648814, 0.81713)
+texture = ExtResource("6_0daw0")
+hframes = 3
+metadata/_edit_lock_ = true
 
 [connection signal="button_up" from="PlaceHolderMiddle/Button" to="." method="_on_button_button_up"]
 [connection signal="button_up" from="PlaceHolderMiddle2/Button" to="." method="_on_button_button_up_2"]
